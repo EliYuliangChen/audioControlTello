@@ -6,8 +6,8 @@ from djitellopy import Tello
 tello = Tello()
 tello.connect()
 
-# model = Model(r"C:\\Users\\cheny\\Downloads\\vosk-model-small-en-us-0.15")
-model = Model(r"C:\\Users\\cheny\\Downloads\\vosk-model-small-cn-0.22")
+# model = Model(r"YOURFILELOCATION")
+model = Model(r"YOURFILELOCATION")
 
 recognizer = KaldiRecognizer(model, 16000)
 
@@ -88,5 +88,8 @@ while True:
     print("Listening...")
     command = getCommand()
     print("Command: " + command)
+    # English
+    # analyzeCommand(command)
+    # Chinese
     analyzeCNCommand(command)
     print(tello.get_battery())

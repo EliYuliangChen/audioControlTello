@@ -6,8 +6,8 @@ from djitellopy import Tello
 tello = Tello()
 tello.connect()
 
-model = Model(r"C:\\Users\\cheny\\Downloads\\vosk-model-small-en-us-0.15")
-# model = Model(r"C:\\Users\\cheny\\Downloads\\vosk-model-small-cn-0.22")
+model = Model("YOURFILELOCATION")
+# model = Model("YOURFILELOCATION")
 
 recognizer = KaldiRecognizer(model, 16000)
 
